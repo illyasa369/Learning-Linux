@@ -1,0 +1,53 @@
+User Management:
+1. Add a user.
+2. Give user a password.
+3. Switch to the new user.
+4. New user is not in sudoers file, add it to sudoers file.
+5. Check the users on the system.
+6. Delete the new user.
+
+
+Group Management:
+1. Create a new group.
+2. Add a new user to the new group.
+3. Change user's primary group.
+4. Remove user from any additional groups.
+5. Check groups on the system. 
+6. Delete group from the system.
+
+
+File Permissons:
+1. View the file permissons in any directory.
+2. Create a new file.
+3. Change the file permissons so that:
+    - No one has permissons.
+    - Owner has all permissons.
+    - Group has read and write permissons.
+    - Others have read and execute permissons.
+4. Do this using symbolic method.
+
+
+File Ownership:
+1. Change owner of a file to a different user.
+2. Change group owner of a file to a different group.
+3. Change both owner and group at the same time to a different user.
+
+
+Redirecting output streams:
+1. Redirect a stdout to a text file.
+2. Redirect a stderr to a text file.
+3. Redirect both.
+
+
+Environment variables:
+1. Create a temporary environment variable for your current session.
+2. Create a permanent environment variable.
+3. Remove a custom variable created.
+4. View all variables to verify.
+
+
+Aliases:
+1. Create a temporary alias.
+2. Create a permanant alias.
+3. View all aliases.
+4. Remove an alias.

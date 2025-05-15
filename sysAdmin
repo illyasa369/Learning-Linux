@@ -1,0 +1,279 @@
+**************************
+*** PACKAGE MANAGEMENT ***
+**************************
+
+Update all packages:
+
+sudo apt update
+
+---
+
+Upgrade all packages:
+
+sudo apt upgrade
+
+---
+
+&& function:
+
+&& can be used to write 2 commands together.
+The command prior will be executed first before executing the second command.
+
+sudo apt update && sudo apt upgrade
+
+---
+
+Install a package:
+
+sudo apt install [PackageName] : Installs the package specified.
+
+---
+
+Remove a package:
+
+sudo apt remove [PackageName] : Removes the package specified.
+
+
+
+***********************
+*** USER MANAGEMENT ***
+***********************
+
+Add a user:
+
+sudo useradd [USERNAME]: Adds a user with the given username.
+
+---
+
+Adding passwords to user accounts:
+
+sudo passwd [USERNAME]
+
+---
+
+Give user sudo access:
+
+sudo usermod -aG sudo [USERNAME]
+
+---
+
+Add a system user:
+
+sudo useradd -r [USERNAME] : Adds a system user.
+
+---
+
+Delete a user:
+
+sudo userdel/deluser [USERNAME] : Deletes user.
+sudo userdel -r [USERNAME] : Deletes a user and their home directory.
+
+---
+
+Check a user exists:
+
+id [USERNAME] : Checks that the specified user exists.
+
+---
+
+View list of users:
+
+getent passwd : Lists entries within /etc/passwd hence showing the users on the system.
+
+---
+
+Change username:
+
+sudo usermod -l [NEW_USERNAME] [USERNAME] : Changes the username of a given user.
+
+---
+
+Change password:
+
+passwd : Change the password of the current user.
+sudo passwd [USERNAME] : Change the password of a different user.
+
+---
+
+Switching users:
+
+su : Switches to root user.
+su [USERNAME] : Switch to a specified user.
+
+
+
+************************
+*** GROUP MANAGEMENT ***
+************************
+
+Add a group:
+
+sudo groupadd [GROUP_NAME] : Add a group.
+
+---
+
+
+Check the groups on the system:
+
+cat /etc/group : Returns a list of all the groups on the system.
+
+grep 100 /etc/group : Returns created groups.
+
+---
+
+Change a user's primary group:
+
+sudo usermod -g [GROUP] [USER] : Change the primary group of a user.
+
+---
+
+Add a user to a secondary group:
+
+sudo usermod -aG [GROUP] [USER] : Adds the user to the group.
+
+---
+
+Remove user from a group:
+
+sudo gpasswd -d [USER] [GROUP]
+
+---
+
+Delete a group: 
+
+sudo groupdel : Delete a group from the system.
+
+
+***********************
+*** FILE MANAGEMENT ***
+***********************
+
+View file permissions:
+
+ls -l : The file permission is written as a sequence of r,w,x and -. If the initial character is d it is a directory, - means it is a file. The next 3 characters indicate the permission of the owner. The next 3 characters are the permissons of users in the specified user group. the final 3 permission set specifies the permissions for any other user.
+
+---
+
+Change file permissons:
+
+chmod XXX [FILE] : Changes permissons using number format.
+chmod u+rwx,g+rwx,o+rwx [FILE] : Changes permissons using symbolic format. Can use - to remove permissons.
+chmod ug=rw : Group permissons, this example gives both user and group read and write.
+
+---
+
+Change file ownership to allow access:
+
+sudo chown [USERNAME] [FILE/DIR] : Changes the owner of the file/dir.
+sudo chgrp [GROUP] [FILE/DIR] : Changes the group ownership of the file/dir.
+sudo chown [USERNAME]:[GROUP] [FILE/DIR] : Changes both ownerships of the file/dir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**************************
+*** PROCESS MANAGEMENT ***
+**************************
+
+View all system processes:
+
+ps aux : Displays the system processes.
+
+---
+
+Kill a process:
+
+kill [PID]
+
+---
+
+Task manager:
+
+top : Opens Linux task manager.
+htop : Opens an advanced task manager.
+
+
+
+**********************************
+*** SYSTEM SERVICES MANAGEMENT ***
+**********************************
+
+systemctl is a service management utility.
+
+systemctl start [SERVICE]
+systemctl stop [SERVICE]
+systemctl restart [SERVICE]
+
+systemctl freeze [SERVICE]
+systemctl thaw [SERVICE]
+
+system status [SERVICE]
+
+
+
+**************************
+*** NETWORK MANAGEMENT ***
+**************************
+
+View IP address:
+
+ip -a : Displays the IP address of the machine.
+
+---
+
+View gateway IP address:
+
+netstat -rn : Displays the routing interfaces for network interfaces on a system.
+
+---
+
+Troubleshooting commands:
+
+ping [HOST] : Pings a specified host which can be an IP address or hostname.
+
+
+traceroute [HOST] : trace packets from the local machine to a host.
+
+
+**********************
+*** SSH MANAGEMENT ***
+**********************
+
+Check SSH connections:
+
+w : Shows all user sessions and SSH information if applicable.
+who am i : Shows information about your current sessions including SSH details.
+
+---
+
+Find SSH PID:
+
+ps aux | grep sshd : Shows list of SSH processes on the system.
+
+--- 
+
+Terminate a SSH connection:
+
+kill [SSH PID] : Terminates/kills the SSH session associated with the given PID.

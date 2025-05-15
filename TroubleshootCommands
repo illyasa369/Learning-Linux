@@ -1,0 +1,13 @@
+Useful commands for troubleshooting:
+
+lsof [FILE/USER/PID] : Displays information about files opened by processes/programs.
+
+kill -9 [PID] : Forcefully terminates a process.
+
+awk '{print $C}' [FILE]: Text processing tool for data extraction or pattern scanning. The example argument '{print $C}' will print the specified column C in the standard output.
+
+sort [OPTION] [FILE] : Sort lines of text files alphabetically, numerically and more.
+
+uniq [OPTIONS] [FILE] : Filters or counts duplicated lines in a sorted file. USE SORT COMMAND BEFORE.
+
+sed -n 'Np' [FILE] : Will print the line N to the standard output.

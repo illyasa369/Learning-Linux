@@ -1,0 +1,43 @@
+Create a temporary environment variable:
+
+
+export VARIABLE_NAME=VALUE 
+
+---
+
+Create a permanent environment variable:
+
+1. Using the export command above, append the environment variable to the .bashrc file.
+2. source .bashrc : Will apply and execute commands in the shell configuration.
+
+
+---
+
+View all environment variables:
+
+printenv
+
+---
+
+Remove an environment variable:
+
+unset VARIABLE_NAME
+
+---
+
+Create temporary alias:
+
+alias ALIAS_NAME=COMMAND
+
+---
+
+Create a permanant environment variable:
+
+1. Append the above alias command to the .bashrc file.
+2. source .bashrc
+
+---
+
+Remove an alias:
+
+unalias ALIAS_NAME 

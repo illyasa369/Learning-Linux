@@ -1,0 +1,25 @@
+Linux is a file system architecture.
+
+/ is the root of the linux file system.
+
+/bin contains the essential command binaries.
+/sbin contains system binaries that system administrators would use - standard users require permission for these binaries.
+
+/boot contains files used by OS for booting the linux machine.
+
+/dev contains files which represents devices on a linux machine such as peripherals, storage devices and their partitions and so on.
+/media contains mount points for removeable media devices.
+/mnt is a temporary mount point for regular filesystems.
+
+/usr is the user application space. Applications installed here are non essential for basic system operation.
+
+/var contains variable data files such as logs and backups.
+/opt is the optional folder where third party tools and software is kept.
+/tmp contains temporary files and is usually empty when the system is rebooted.
+
+/home is the subdirectory for storing personal files and documents for each user on the system.
+/root is the home directory for the root user.
+
+/srv is the service folder used to hold server data for servers ran on linux machines.
+
+/etc holds configurations files for the system.

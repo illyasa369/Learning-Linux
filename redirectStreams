@@ -1,0 +1,7 @@
+> : redirects stdout
+ls > files.txt
+
+2> : redirects stderr
+ls noFile > error.txt
+
+&> : redirects both stdout and stderr

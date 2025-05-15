@@ -1,0 +1,217 @@
+
+uname -a : Displays system information.
+
+---
+
+man [COMMAND] : View documentation of a command.
+[COMMAND] --help : View information about a command.
+
+---
+
+echo command:
+
+echo [TEXT] / echo $variable : Displays text or value of a variable in the terminal.
+echo [TEXT] > [FILE] : Adds text to a new file.
+echo [TEXT] >> [FILE] : Appends text to a file.
+
+---
+
+cat COMMAND:
+
+cat > [FILE] : Creates a new file and  allows input to be added, CTRL + D to save.
+cat >> [FILE] : Allows input to file.
+cat [FILE] : Prints content of a file to terminal.
+cat [FILE] [FILE] : Concatenates 2 files and result is printed to the terminal, result is not saved.
+
+---
+
+grep COMMAND:
+
+grep [PATTERN] [FILE] : Searches for a pattern in the specified file and prints matching lines.
+grep -i [PATTERN] [FILE] : Case-insensitive search for the pattern in the file.
+grep -n [PATTERN] [FILE] : Displays matching lines along with their line numbers.
+
+grep -r [PATTERN] [DIRECTORY] : Recursively searches for the pattern in all files within a directory.
+grep -v [PATTERN] [FILE] : Prints lines that do not match the pattern.
+
+---
+
+head and tail COMMAND:
+
+head [FILE] : Prints first few lines of a file to terminal.
+head -n X [FILE] : Prints the first X lines.
+
+tail [FILE] : Prints last few line of a file to terminal.
+tail -n X [FILE] : Prints the last X lines.
+
+---
+
+ssh COMMAND:
+
+ssh userName@REMOTESERVER : Connect to remote server using SSH with the given username.
+
+---
+
+Shutdown/Reboot COMMANDS:
+
+sudo halt / sudo poweroff : Begins shutdowns sequence immediately.
+
+shutdown -h : Schedules the shutdown sequence to begin 1 min later.
+shutdown -r : Schedules reboot sequence to begin 1 min later.
+
+shutdown -c : Cancels scheduled reboot or shutdown sequence.
+
+---
+
+Locate programs:
+
+which [PROGRAM] : Locates where a program resides in the filesystem.
+whereis [PROGRAM] : Alternative to which.
+
+---
+
+Navigate the file system:
+
+pwd : Prints current working directory.
+cd : Changes to home directory.
+cd .. : Changes to parent directory.
+cd - : Changes to previous directory.
+
+pushd [PATH] : Pushes current working directory to a stack and changes to the directory specified in [PATH].
+popd : Pops any paths from the stack and changes to that directory.
+
+---
+
+View a directory and its contents:
+
+ls : Lists the content of  the current working directory.
+ls -a : Lists all content including hidden files in the current working directory.
+
+tree : Displays the directories and their files of the current working directory in a tree-like format.
+tree -d : Displays directories only of the current working directory in a tree-like format.
+
+less [FILE] : Outputs less of a file's contents to the screen and allows user to go through the contents a chunk at a time.
+
+---
+
+Creating and deleting files:
+
+touch [FILE] : Creates an empty file for use later. (Does not require file extension)
+rm [FILE] : Deletes a file.
+rm -f [FILE] : Deletes a  file forcefully.
+rm -i [FILE] : Asks for confirmation when deleting a file.
+
+---
+
+Creating and deleting directories:
+
+mkdir [DIR] : Creates a new directory in the current working directory.
+rmdir [DIR] : Deletes an empty directory.
+rm -rf [DIR] : Deletes a directory and all of its contents.
+
+---
+
+Moving and renaming files/directories:
+
+mv [FILE/DIR] [DESTINATON] : Moves a file or directory.
+mv [FILE/DIR] [FILE/DIR] : Rename a file or directory.
+
+---
+
+Copying files:
+
+cp [FILE] [DESTINATION] : Copies a file from its source to a given destination.
+
+---
+
+Using files as input/output for programs:
+
+[PROGRAM] < [FILE] : Program takes file as input data.
+[PROGRAM] > [FILE] : Program saves output data in a file.
+
+---
+
+Pipes:
+
+[COMMAND] | [COMMAND] | [COMMAND] : Output of initial command is given as input to the next command in the pipeline.
+
+---
+
+Locating files:
+
+locate [FILE] : Locates files.
+
+---
+
+Update database locate command uses:
+
+sudo updatedb : Updates the database the locate command used when locating a file in the event that it has not been updated.
+
+---
+
+du and df command:
+
+du : Shows disk usage of the contents in a directory.
+df : Shows storage information of the system's filesystem.
+
+---
+
+free command: 
+
+free : displays information about the total, available and used storage of the system.
+
+___
+
+find command:
+
+find : searches for files in a directories hierarchy.
+
+Example: find . -name "FileName" 
+
+find : Command used.
+. :  Searches within the current working directory.
+-name "FileName" : Filters the search to the name. 
+
+---
+
+sort command:
+
+sort [FILE] : Sorts a file alphabetically and outputs.
+
+---
+
+history command:
+
+history : View previous commands used.
+![X] : Used the command on line X.
+
+---
+
+reverse-i-search:
+
+CTRL + r : Opens the reverse-i-search. Anything typed is searched in the data of history command.
+	   Pressing CTRL + r toggles through items in history that match the user input.
+
+---
+
+mount command:
+
+mount [PATH] [DIRECTORY] : Mounts content of an external device to a file within the linux system.
+			   [PATH] is the path to the external device found using lsblk.
+			   [DIRECTORY] is where the content is mounted.
+
+---
+
+umount command:
+
+umount [DIRECTORY] : When finished using an external device it is unmounted using the umount command,
+		     [DIRECTORY] is the directory in which the device was mounted to.
+
+---
+
+tar command:
+
+tar -czvf [FILE].tar.gz [FILE] : Compresses the [FILE] specified.
+tar -xzvf [FILE].tar.gz : Extract a compressed archive.
+
+---
