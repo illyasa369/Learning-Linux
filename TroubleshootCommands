@@ -11,3 +11,5 @@ sort [OPTION] [FILE] : Sort lines of text files alphabetically, numerically and 
 uniq [OPTIONS] [FILE] : Filters or counts duplicated lines in a sorted file. USE SORT COMMAND BEFORE.
 
 sed -n 'Np' [FILE] : Will print the line N to the standard output.
+
+type [COMMAND] : Tells you how a command is interpreted by the shell.
