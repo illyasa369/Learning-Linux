@@ -22,6 +22,7 @@ printenv
 Remove an environment variable:
 
 unset VARIABLE_NAME
+remove from .bashrc and source if permenant.
 
 ---
 
@@ -40,4 +41,6 @@ Create a permanant environment variable:
 
 Remove an alias:
 
-unalias ALIAS_NAME 
+1. unalias ALIAS_NAME 
+2. remove from .bashrc file.
+3. source ~/.bashrc 
