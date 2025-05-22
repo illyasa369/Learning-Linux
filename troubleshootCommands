@@ -7,6 +7,7 @@ kill -9 [PID] : Forcefully terminates a process.
 awk '{print $C}' [FILE]: Text processing tool for data extraction or pattern scanning. The example argument '{print $C}' will print the specified column C in the standard output.
 
 sort [OPTION] [FILE] : Sort lines of text files alphabetically, numerically and more.
+sort -k n,n -h : Sorts using column/field. n means using nth field. n,n means only using nth field. -h sorts human readable numbers.
 
 uniq [OPTIONS] [FILE] : Filters or counts duplicated lines in a sorted file. USE SORT COMMAND BEFORE.
 
