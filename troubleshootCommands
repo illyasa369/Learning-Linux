@@ -1,4 +1,4 @@
-Useful commands for troubleshooting:
+Useful commands I've learnt from troubleshooting:
 
 lsof [FILE/USER/PID] : Displays information about files opened by processes/programs.
 
@@ -14,3 +14,5 @@ uniq [OPTIONS] [FILE] : Filters or counts duplicated lines in a sorted file. USE
 sed -n 'Np' [FILE] : Will print the line N to the standard output.
 
 type [COMMAND] : Tells you how a command is interpreted by the shell.
+
+grep -l [PATTERN] [FILE] : Outputs only the filename for matches.
