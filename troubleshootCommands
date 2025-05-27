@@ -16,3 +16,7 @@ sed -n 'Np' [FILE] : Will print the line N to the standard output.
 type [COMMAND] : Tells you how a command is interpreted by the shell.
 
 grep -l [PATTERN] [FILE] : Outputs only the filename for matches.
+
+cut [OPTION] [FILE/INPUT] : Extracts specific sections from each line of input.
+cut -c1-5 example.txt : Extracts the first 5 characters of each line.
+cut -f1 -d: "hello:world:!" : Extracts the first field (-f1) using the delimiter : (-d:) and returns "hello".
